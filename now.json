@@ -6,7 +6,7 @@
     { "src": "endpoints/*.ts", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/api/v0/name", "dest": "/endpoints/name.py" },
-    { "src": "/api/v0/(.*)", "dest": "/endpoints/$1.ts" }
+    { "src": "/v0/name", "dest": "/endpoints/name.py" },
+    { "src": "/v0/(.*)", "dest": "/endpoints/$1.ts" }
   ]
 }
