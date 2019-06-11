@@ -1,15 +1,22 @@
 import { IncomingMessage, ServerResponse } from 'http'
 import * as url from 'url'
-import { send } from 'micro'
+import * as Joi from '@hapi/joi'
 
-type TheFunction = (req: IncomingMessage, res: ServerResponse, query: url.UrlWithParsedQuery['query']) => void
+type TheFunction<T> = (req: IncomingMessage, res: ServerResponse, query: T) => void
 
-export default (fn: TheFunction, methods: string[]) => async (req: IncomingMessage, res: ServerResponse) => {
-  if (methods.includes(req.method)) {
-    const queryData = url.parse(req.url, true).query;
+export default <T>(fn: TheFunction<T>, schema: Joi.ObjectSchema) => async (req: IncomingMessage, res: ServerResponse) => {
+  const queryParameters = url.parse(req.url, true).query;
 
-    fn(req, res, queryData)
-  } else {
-    send(res, 404, { message: 'Method Not Allowed' })
+  // validate schema
+  const result = Joi.validate(queryParameters, schema);
+
+  if (result.error) {
+    const err = new Error(result.error.details[0].message) as any
+    err.statusCode = 400
+    throw err
   }
+
+  const queryData: T = Object.assign(result.value)
+
+  fn(req, res, queryData)
 }

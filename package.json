@@ -2,12 +2,20 @@
   "name": "oneapi",
   "devDependencies": {
     "@types/disposable-email-domains": "^1.0.1",
+    "@types/hapi__joi": "^15.0.1",
     "@types/micro": "^7.3.3",
     "@types/node": "^10.12.18"
   },
   "dependencies": {
+    "@hapi/joi": "^15.0.3",
+    "@types/ua-parser-js": "^0.7.33",
     "disposable-email-domains": "^1.0.46",
+    "isbot": "^2.3.0",
+    "libphonenumber-js": "^1.7.19",
+    "lodash.defaultsdeep": "^4.6.0",
     "micro": "^9.3.4",
-    "micro-get": "^0.1.1"
+    "micro-get": "^0.1.1",
+    "ua-parser-js": "^0.7.20",
+    "vparse": "^1.1.0"
   }
 }
