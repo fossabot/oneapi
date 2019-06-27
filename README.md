@@ -5,6 +5,7 @@
   <a href="https://travis-ci.org/bazzite/oneapi" rel="nofollow">
     <img src="https://img.shields.io/travis/bazzite/oneapi.svg" alt="Travis">
   </a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fbazzite%2Foneapi?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbazzite%2Foneapi.svg?type=shield"/></a>
   <a href="https://greenkeeper.io/" rel="nofollow">
     <img src="https://badges.greenkeeper.io/bazzite/oneapi.svg" alt="Greenkeeper badge">
   </a>
@@ -19,6 +20,9 @@
   </a>
 </p>
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fbazzite%2Foneapi.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fbazzite%2Foneapi?ref=badge_large)
 
 # OneAPI
 
