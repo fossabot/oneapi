@@ -4,7 +4,7 @@
     "@types/disposable-email-domains": "^1.0.1",
     "@types/hapi__joi": "^15.0.1",
     "@types/micro": "^7.3.3",
-    "@types/node": "^10.12.18",
+    "@types/node": "^12.0.10",
     "@types/platform": "^1.3.2",
     "@types/useragent": "^2.1.1"
   },
