@@ -24,8 +24,11 @@
 
 > One API for All. Use many popular libraries in one simple API you can easily deploy.
 
-⚠️ **Warning: Under Construction**
+---
 
+⚠️ **Warning: This project is in alpha state, under active development.**
+
+---
 
 ## Documentation & Community Support
 
