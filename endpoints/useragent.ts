@@ -4,6 +4,8 @@ import parseVersion from 'vparse'
 import isBot from 'isbot'
 import * as Joi from '@hapi/joi'
 import defaultsdeep from 'lodash.defaultsdeep'
+import * as platform from 'platform'
+import * as useragent from 'useragent'
 
 import validate from './utils/validate'
 import errors from './utils/errors'
@@ -51,21 +53,34 @@ interface queryData {
 export default errors(validate<queryData>((req, res, query) => {
   try {
     const statusCode = 200
+
+    // uaParserJs
     const parser = new UAParser(query.ua);
+    const uaParserJs: { [key: string]: any } = defaultsdeep(parser.getResult(), defaultData)
 
-    const data: { [key: string]: any } = defaultsdeep(parser.getResult(), defaultData)
+    if (uaParserJs.browser.version) {
+      const browserVersion = parseVersion(uaParserJs.browser.version)
 
-    if (data.browser.version) {
-      const browserVersion = parseVersion(data.browser.version)
-
-      data.browser.version_major = browserVersion.major
-      data.browser.version_minor = browserVersion.minor
-      data.browser.version_patch = browserVersion.patch
-      data.browser.version_build = browserVersion.build
+      uaParserJs.browser.version_major = browserVersion.major
+      uaParserJs.browser.version_minor = browserVersion.minor
+      uaParserJs.browser.version_patch = browserVersion.patch
+      uaParserJs.browser.version_build = browserVersion.build
     }
 
-    data.crawler = {
+    uaParserJs.crawler = {
       is_crawler: isBot(query.ua)
+    }
+
+    // platform
+    const platformJs = platform.parse(query.ua)
+
+    // useragent
+    const useragentData = useragent.parse(query.ua)
+
+    const data = {
+      uaParserJs,
+      platformJs,
+      useragent: useragentData.toJSON()
     }
 
     send(res, statusCode, data)

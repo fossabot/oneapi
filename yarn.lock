@@ -57,10 +57,20 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.14.8.tgz#fe444203ecef1162348cd6deb76c62477b2cc6e9"
   integrity sha512-I4+DbJEhLEg4/vIy/2gkWDvXBOOtPKV9EnLhYjMoqxcRW+TTZtUftkHktz/a8suoD5mUL7m6ReLrkPvSsCQQmw==
 
+"@types/platform@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@types/platform/-/platform-1.3.2.tgz#c0404c4e2a08e04295ab3d1241a856c2a3cab06e"
+  integrity sha512-Tn6OuJDAG7bJbyi4R7HqcxXp1w2lmIxVXqyNhPt1Bm0FO2EWIi3CI87JVzF7ncqK0ZMPuUycS3wTMIk85EeF1Q==
+
 "@types/ua-parser-js@^0.7.33":
   version "0.7.33"
   resolved "https://registry.yarnpkg.com/@types/ua-parser-js/-/ua-parser-js-0.7.33.tgz#4a92089511574e12928a7cb6b99a01831acd1dd7"
   integrity sha512-ngUKcHnytUodUCL7C6EZ+lVXUjTMQb+9p/e1JjV5tN9TVzS98lHozWEFRPY1QcCdwFeMsmVWfZ3DPPT/udCyIw==
+
+"@types/useragent@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@types/useragent/-/useragent-2.1.1.tgz#e7e897f867941b03c41144f659c8f8f412a72d06"
+  integrity sha1-5+iX+GeUGwPEEUT2Wcj49BKnLQY=
 
 arg@4.1.0:
   version "4.1.0"
@@ -130,6 +140,14 @@ lodash.defaultsdeep@^4.6.0:
   resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.0.tgz#bec1024f85b1bd96cbea405b23c14ad6443a6f81"
   integrity sha1-vsECT4WxvZbL6kBbI8FK1kQ6b4E=
 
+lru-cache@4.1.x:
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
+  integrity sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==
+  dependencies:
+    pseudomap "^1.0.2"
+    yallist "^2.1.2"
+
 micro-get@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/micro-get/-/micro-get-0.1.1.tgz#6eecd2e4ddf41d331fcd51da3f48b18f2cb745c9"
@@ -149,6 +167,21 @@ minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
   integrity sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
+
+os-tmpdir@~1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
+  integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
+
+platform@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/platform/-/platform-1.3.5.tgz#fb6958c696e07e2918d2eeda0f0bc9448d733444"
+  integrity sha512-TuvHS8AOIZNAlE77WUDiR4rySV/VMptyMfcfeoMgs4P8apaZM3JrnbzBiixKUv+XR6i+BXrQh8WAnjaSPFO65Q==
+
+pseudomap@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
+  integrity sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
 
 raw-body@2.3.2:
   version "2.3.2"
@@ -175,6 +208,13 @@ setprototypeof@1.0.3:
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
 
+tmp@0.0.x:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
+  integrity sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==
+  dependencies:
+    os-tmpdir "~1.0.2"
+
 ua-parser-js@^0.7.20:
   version "0.7.20"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.20.tgz#7527178b82f6a62a0f243d1f94fd30e3e3c21098"
@@ -184,6 +224,14 @@ unpipe@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
   integrity sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw=
+
+useragent@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/useragent/-/useragent-2.3.0.tgz#217f943ad540cb2128658ab23fc960f6a88c9972"
+  integrity sha512-4AoH4pxuSvHCjqLO04sU6U/uE65BYza8l/KKBS0b0hnUPWi+cQ2BpeTEwejCSx9SPV5/U03nniDTrWx5NrmKdw==
+  dependencies:
+    lru-cache "4.1.x"
+    tmp "0.0.x"
 
 vparse@^1.1.0:
   version "1.1.0"
@@ -202,3 +250,8 @@ xmlbuilder@~9.0.1:
   version "9.0.7"
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
   integrity sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=
+
+yallist@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
+  integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
